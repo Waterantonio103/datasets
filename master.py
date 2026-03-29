@@ -72,6 +72,10 @@ def _process_chunk(lines):
             skipped += 1
             continue
 
+        if not isinstance(entry, dict):
+            skipped += 1
+            continue
+
         content = entry.get("content")
         if content is None:
             skipped += 1
