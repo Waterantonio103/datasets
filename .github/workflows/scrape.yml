@@ -12,6 +12,9 @@ on:
 env:
   MAX_FILES: ${{ github.event.inputs.max_files || '200' }}
 
+permissions:
+  contents: write
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
