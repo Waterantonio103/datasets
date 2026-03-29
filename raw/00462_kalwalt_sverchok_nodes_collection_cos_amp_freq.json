@@ -1,0 +1,186 @@
+{
+  "export_version": "0.064",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "Float": {
+      "bl_idname": "FloatNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -845.199951171875,
+        249.43690490722656
+      ],
+      "params": {
+        "float_": 1.7799999713897705
+      },
+      "width": 140.0
+    },
+    "Float.001": {
+      "bl_idname": "FloatNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -858.3338623046875,
+        161.70152282714844
+      ],
+      "params": {
+        "float_": 0.7000000476837158
+      },
+      "width": 140.0
+    },
+    "Line": {
+      "bl_idname": "LineNode",
+      "color": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1161.79736328125,
+        144.54473876953125
+      ],
+      "params": {
+        "Center": 1,
+        "int_": 1000,
+        "step_": 0.10000000149011612
+      },
+      "width": 140.0
+    },
+    "Monad": {
+      "bl_idname": "SvMonadGenericNode",
+      "color": [
+        0.8308190107345581,
+        0.911391019821167,
+        0.7545620203018188
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "cosine(amp freq)",
+      "location": [
+        -649.5986938476562,
+        285.3417053222656
+      ],
+      "params": {
+        "cls_bl_idname": "SvGroupNodeMonad_140404682763065",
+        "data_storage": "{'input_template': [['X', 'StringsSocket', {'prop_name': 'x'}], ['Y', 'StringsSocket', {'prop_name': 'y'}], ['Y', 'StringsSocket', {'prop_name': 'y2'}]], 'output_template': [('float', 'StringsSocket')]}",
+        "vectorize": 0
+      },
+      "width": 140.0
+    },
+    "Vector in": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -371.5855712890625,
+        127.50426483154297
+      ],
+      "params": {
+        "z_": 1.0
+      },
+      "width": 100.0
+    },
+    "Vector out": {
+      "bl_idname": "VectorsOutNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -934.435546875,
+        56.72054672241211
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Viewer Draw": {
+      "bl_idname": "ViewerNode2",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -167.32420349121094,
+        159.05694580078125
+      ],
+      "params": {
+        "activate": 1
+      },
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Line",
+      "Vertices",
+      "Vector out",
+      "Vectors"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Monad",
+      "X"
+    ],
+    [
+      "Float",
+      "Float",
+      "Monad",
+      "Y"
+    ],
+    [
+      "Float.001",
+      "Float",
+      "Monad",
+      "Y"
+    ],
+    [
+      "Monad",
+      "float",
+      "Vector in",
+      "X"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Vector in",
+      "Y"
+    ],
+    [
+      "Vector in",
+      "Vectors",
+      "Viewer Draw",
+      "vertices"
+    ]
+  ]
+}

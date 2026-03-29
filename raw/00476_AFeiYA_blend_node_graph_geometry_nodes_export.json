@@ -1,0 +1,629 @@
+{
+    "node_group_name": "Geometry Nodes.001",
+    "interface": {
+        "inputs": [
+            {
+                "name": "Geometry",
+                "identifier": "Socket_0",
+                "socket_type": "NodeSocketGeometry"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "Geometry",
+                "identifier": "Socket_1",
+                "socket_type": "NodeSocketGeometry"
+            }
+        ]
+    },
+    "nodes": [
+        {
+            "id": 0,
+            "name": "Group Output",
+            "bl_idname": "NodeGroupOutput",
+            "location": [
+                1774.35888671875,
+                541.8674926757812
+            ],
+            "width": 140.0,
+            "height": 100.0,
+            "inputs": [
+                {
+                    "name": "Geometry",
+                    "identifier": "Socket_1"
+                },
+                {
+                    "name": "",
+                    "identifier": "__extend__"
+                }
+            ],
+            "outputs": [],
+            "node_settings": {
+                "warning_propagation": "ALL",
+                "mute": false,
+                "show_texture": false,
+                "is_active_output": true
+            }
+        },
+        {
+            "id": 1,
+            "name": "Capture Attribute",
+            "bl_idname": "GeometryNodeCaptureAttribute",
+            "location": [
+                1254.4813232421875,
+                523.8064575195312
+            ],
+            "width": 140.0,
+            "height": 100.0,
+            "inputs": [
+                {
+                    "name": "Geometry",
+                    "identifier": "Geometry"
+                },
+                {
+                    "name": "Normal",
+                    "identifier": "Value"
+                },
+                {
+                    "name": "",
+                    "identifier": "__extend__"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Geometry",
+                    "identifier": "Geometry"
+                },
+                {
+                    "name": "Normal",
+                    "identifier": "Attribute"
+                },
+                {
+                    "name": "",
+                    "identifier": "__extend__"
+                }
+            ],
+            "node_settings": {
+                "warning_propagation": "ALL",
+                "mute": false,
+                "show_texture": false,
+                "active_index": 0,
+                "domain": "FACE"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Normal",
+            "bl_idname": "GeometryNodeInputNormal",
+            "location": [
+                982.3838500976562,
+                408.5827331542969
+            ],
+            "width": 140.0,
+            "height": 100.0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "Normal",
+                    "identifier": "Normal"
+                }
+            ],
+            "node_settings": {
+                "warning_propagation": "ALL",
+                "mute": false,
+                "show_texture": false,
+                "legacy_corner_normals": false
+            }
+        },
+        {
+            "id": 3,
+            "name": "Quadrilateral",
+            "bl_idname": "GeometryNodeCurvePrimitiveQuadrilateral",
+            "location": [
+                -188.645263671875,
+                655.2725830078125
+            ],
+            "width": 140.0,
+            "height": 100.0,
+            "inputs": [
+                {
+                    "name": "Width",
+                    "identifier": "Width",
+                    "default_value": 2.0
+                },
+                {
+                    "name": "Height",
+                    "identifier": "Height",
+                    "default_value": 2.0
+                },
+                {
+                    "name": "Bottom Width",
+                    "identifier": "Bottom Width",
+                    "default_value": 4.0
+                },
+                {
+                    "name": "Top Width",
+                    "identifier": "Top Width",
+                    "default_value": 2.0
+                },
+                {
+                    "name": "Offset",
+                    "identifier": "Offset",
+                    "default_value": 1.0
+                },
+                {
+                    "name": "Bottom Height",
+                    "identifier": "Bottom Height",
+                    "default_value": 3.0
+                },
+                {
+                    "name": "Top Height",
+                    "identifier": "Top Height",
+                    "default_value": 1.0
+                },
+                {
+                    "name": "Point 1",
+                    "identifier": "Point 1",
+                    "default_value": "<Vector (-1.0000, -1.0000, 0.0000)>",
+                    "default_value_type": "Vector"
+                },
+                {
+                    "name": "Point 2",
+                    "identifier": "Point 2",
+                    "default_value": "<Vector (1.0000, -1.0000, 0.0000)>",
+                    "default_value_type": "Vector"
+                },
+                {
+                    "name": "Point 3",
+                    "identifier": "Point 3",
+                    "default_value": "<Vector (1.0000, 1.0000, 0.0000)>",
+                    "default_value_type": "Vector"
+                },
+                {
+                    "name": "Point 4",
+                    "identifier": "Point 4",
+                    "default_value": "<Vector (-1.0000, 1.0000, 0.0000)>",
+                    "default_value_type": "Vector"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Curve",
+                    "identifier": "Curve"
+                }
+            ],
+            "node_settings": {
+                "warning_propagation": "ALL",
+                "mute": false,
+                "show_texture": false,
+                "mode": "RECTANGLE"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Quadrilateral.001",
+            "bl_idname": "GeometryNodeCurvePrimitiveQuadrilateral",
+            "location": [
+                -140.00921630859375,
+                445.34808349609375
+            ],
+            "width": 140.0,
+            "height": 100.0,
+            "inputs": [
+                {
+                    "name": "Width",
+                    "identifier": "Width",
+                    "default_value": 0.800000011920929
+                },
+                {
+                    "name": "Height",
+                    "identifier": "Height",
+                    "default_value": 0.5
+                },
+                {
+                    "name": "Bottom Width",
+                    "identifier": "Bottom Width",
+                    "default_value": 4.0
+                },
+                {
+                    "name": "Top Width",
+                    "identifier": "Top Width",
+                    "default_value": 2.0
+                },
+                {
+                    "name": "Offset",
+                    "identifier": "Offset",
+                    "default_value": 1.0
+                },
+                {
+                    "name": "Bottom Height",
+                    "identifier": "Bottom Height",
+                    "default_value": 3.0
+                },
+                {
+                    "name": "Top Height",
+                    "identifier": "Top Height",
+                    "default_value": 1.0
+                },
+                {
+                    "name": "Point 1",
+                    "identifier": "Point 1",
+                    "default_value": "<Vector (-1.0000, -1.0000, 0.0000)>",
+                    "default_value_type": "Vector"
+                },
+                {
+                    "name": "Point 2",
+                    "identifier": "Point 2",
+                    "default_value": "<Vector (1.0000, -1.0000, 0.0000)>",
+                    "default_value_type": "Vector"
+                },
+                {
+                    "name": "Point 3",
+                    "identifier": "Point 3",
+                    "default_value": "<Vector (1.0000, 1.0000, 0.0000)>",
+                    "default_value_type": "Vector"
+                },
+                {
+                    "name": "Point 4",
+                    "identifier": "Point 4",
+                    "default_value": "<Vector (-1.0000, 1.0000, 0.0000)>",
+                    "default_value_type": "Vector"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Curve",
+                    "identifier": "Curve"
+                }
+            ],
+            "node_settings": {
+                "warning_propagation": "ALL",
+                "mute": false,
+                "show_texture": false,
+                "mode": "RECTANGLE"
+            }
+        },
+        {
+            "id": 5,
+            "name": "Trim Curve",
+            "bl_idname": "GeometryNodeTrimCurve",
+            "location": [
+                77.42203521728516,
+                683.3262329101562
+            ],
+            "width": 140.0,
+            "height": 100.0,
+            "inputs": [
+                {
+                    "name": "Curve",
+                    "identifier": "Curve"
+                },
+                {
+                    "name": "Selection",
+                    "identifier": "Selection",
+                    "default_value": true
+                },
+                {
+                    "name": "Start",
+                    "identifier": "Start",
+                    "default_value": 0.0
+                },
+                {
+                    "name": "End",
+                    "identifier": "End",
+                    "default_value": 1.0
+                },
+                {
+                    "name": "Start",
+                    "identifier": "Start_001",
+                    "default_value": 0.0
+                },
+                {
+                    "name": "End",
+                    "identifier": "End_001",
+                    "default_value": 3.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Curve",
+                    "identifier": "Curve"
+                }
+            ],
+            "node_settings": {
+                "warning_propagation": "ALL",
+                "mute": false,
+                "show_texture": false,
+                "mode": "LENGTH"
+            }
+        },
+        {
+            "id": 6,
+            "name": "Fillet Curve",
+            "bl_idname": "GeometryNodeFilletCurve",
+            "location": [
+                303.43902587890625,
+                732.6069946289062
+            ],
+            "width": 140.0,
+            "height": 100.0,
+            "inputs": [
+                {
+                    "name": "Curve",
+                    "identifier": "Curve"
+                },
+                {
+                    "name": "Count",
+                    "identifier": "Count",
+                    "default_value": 5
+                },
+                {
+                    "name": "Radius",
+                    "identifier": "Radius",
+                    "default_value": 0.25
+                },
+                {
+                    "name": "Limit Radius",
+                    "identifier": "Limit Radius",
+                    "default_value": false
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Curve",
+                    "identifier": "Curve"
+                }
+            ],
+            "node_settings": {
+                "warning_propagation": "ALL",
+                "mute": false,
+                "show_texture": false,
+                "mode": "POLY"
+            }
+        },
+        {
+            "id": 7,
+            "name": "Fillet Curve.001",
+            "bl_idname": "GeometryNodeFilletCurve",
+            "location": [
+                122.99968719482422,
+                456.2791748046875
+            ],
+            "width": 140.0,
+            "height": 100.0,
+            "inputs": [
+                {
+                    "name": "Curve",
+                    "identifier": "Curve"
+                },
+                {
+                    "name": "Count",
+                    "identifier": "Count",
+                    "default_value": 5
+                },
+                {
+                    "name": "Radius",
+                    "identifier": "Radius",
+                    "default_value": 0.029999999329447746
+                },
+                {
+                    "name": "Limit Radius",
+                    "identifier": "Limit Radius",
+                    "default_value": true
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Curve",
+                    "identifier": "Curve"
+                }
+            ],
+            "node_settings": {
+                "warning_propagation": "ALL",
+                "mute": false,
+                "show_texture": false,
+                "mode": "POLY"
+            }
+        },
+        {
+            "id": 8,
+            "name": "Curve to Mesh",
+            "bl_idname": "GeometryNodeCurveToMesh",
+            "location": [
+                557.2411499023438,
+                614.1968383789062
+            ],
+            "width": 140.0,
+            "height": 100.0,
+            "inputs": [
+                {
+                    "name": "Curve",
+                    "identifier": "Curve"
+                },
+                {
+                    "name": "Profile Curve",
+                    "identifier": "Profile Curve"
+                },
+                {
+                    "name": "Fill Caps",
+                    "identifier": "Fill Caps",
+                    "default_value": false
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Mesh",
+                    "identifier": "Mesh"
+                }
+            ],
+            "node_settings": {
+                "warning_propagation": "ALL",
+                "mute": false,
+                "show_texture": false
+            }
+        },
+        {
+            "id": 9,
+            "name": "Set Shade Smooth",
+            "bl_idname": "GeometryNodeSetShadeSmooth",
+            "location": [
+                790.0634155273438,
+                633.0236206054688
+            ],
+            "width": 140.0,
+            "height": 100.0,
+            "inputs": [
+                {
+                    "name": "Geometry",
+                    "identifier": "Geometry"
+                },
+                {
+                    "name": "Selection",
+                    "identifier": "Selection",
+                    "default_value": true
+                },
+                {
+                    "name": "Shade Smooth",
+                    "identifier": "Shade Smooth",
+                    "default_value": false
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Geometry",
+                    "identifier": "Geometry"
+                }
+            ],
+            "node_settings": {
+                "warning_propagation": "ALL",
+                "mute": false,
+                "show_texture": false,
+                "domain": "FACE"
+            }
+        },
+        {
+            "id": 10,
+            "name": "Group",
+            "bl_idname": "GeometryNodeGroup",
+            "location": [
+                1504.733154296875,
+                518.5156860351562
+            ],
+            "width": 140.0,
+            "height": 100.0,
+            "inputs": [
+                {
+                    "name": "Mesh",
+                    "identifier": "Input_0"
+                },
+                {
+                    "name": "Angle",
+                    "identifier": "Input_1",
+                    "default_value": 0.5235987901687622
+                },
+                {
+                    "name": "Ignore Sharpness",
+                    "identifier": "Socket_1",
+                    "default_value": false
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Mesh",
+                    "identifier": "Output_2"
+                }
+            ],
+            "node_settings": {
+                "warning_propagation": "ALL",
+                "mute": false,
+                "show_texture": false,
+                "node_tree": {
+                    "type": "GeometryNodeTree",
+                    "name": "Smooth by Angle.001"
+                }
+            }
+        }
+    ],
+    "links": [
+        {
+            "from_node_id": 10,
+            "from_socket_identifier": "Output_2",
+            "from_socket_name": "Mesh",
+            "to_node_id": 0,
+            "to_socket_identifier": "Socket_1",
+            "to_socket_name": "Geometry"
+        },
+        {
+            "from_node_id": 3,
+            "from_socket_identifier": "Curve",
+            "from_socket_name": "Curve",
+            "to_node_id": 5,
+            "to_socket_identifier": "Curve",
+            "to_socket_name": "Curve"
+        },
+        {
+            "from_node_id": 5,
+            "from_socket_identifier": "Curve",
+            "from_socket_name": "Curve",
+            "to_node_id": 6,
+            "to_socket_identifier": "Curve",
+            "to_socket_name": "Curve"
+        },
+        {
+            "from_node_id": 4,
+            "from_socket_identifier": "Curve",
+            "from_socket_name": "Curve",
+            "to_node_id": 7,
+            "to_socket_identifier": "Curve",
+            "to_socket_name": "Curve"
+        },
+        {
+            "from_node_id": 6,
+            "from_socket_identifier": "Curve",
+            "from_socket_name": "Curve",
+            "to_node_id": 8,
+            "to_socket_identifier": "Curve",
+            "to_socket_name": "Curve"
+        },
+        {
+            "from_node_id": 7,
+            "from_socket_identifier": "Curve",
+            "from_socket_name": "Curve",
+            "to_node_id": 8,
+            "to_socket_identifier": "Profile Curve",
+            "to_socket_name": "Profile Curve"
+        },
+        {
+            "from_node_id": 8,
+            "from_socket_identifier": "Mesh",
+            "from_socket_name": "Mesh",
+            "to_node_id": 9,
+            "to_socket_identifier": "Geometry",
+            "to_socket_name": "Geometry"
+        },
+        {
+            "from_node_id": 9,
+            "from_socket_identifier": "Geometry",
+            "from_socket_name": "Geometry",
+            "to_node_id": 1,
+            "to_socket_identifier": "Geometry",
+            "to_socket_name": "Geometry"
+        },
+        {
+            "from_node_id": 1,
+            "from_socket_identifier": "Geometry",
+            "from_socket_name": "Geometry",
+            "to_node_id": 10,
+            "to_socket_identifier": "Input_0",
+            "to_socket_name": "Mesh"
+        },
+        {
+            "from_node_id": 2,
+            "from_socket_identifier": "Normal",
+            "from_socket_name": "Normal",
+            "to_node_id": 1,
+            "to_socket_identifier": "Value",
+            "to_socket_name": "Normal"
+        }
+    ]
+}
