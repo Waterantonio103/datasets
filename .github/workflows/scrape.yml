@@ -1,0 +1,58 @@
+name: Scrape Blender Node Graphs
+
+on:
+  schedule:
+    - cron: "0 3 * * 0"   # weekly, Sunday 03:00 UTC
+  workflow_dispatch:
+    inputs:
+      max_files:
+        description: "Max files to download per query (default 200)"
+        default: "200"
+
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  MAX_FILES: ${{ github.event.inputs.max_files || '200' }}
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run scraper
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scraper.py --max-files "$MAX_FILES" --out-dir raw/
+
+      - name: Run processing pipeline
+        run: python logic.py
+
+      - name: Normalize non-standard formats
+        run: python normalize_formats.py
+
+      - name: Filter to clean dataset
+        run: python filter_clean.py
+
+      - name: Commit results
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add raw/ dataset_alpaca_clean.json main_dataset_alpaca.json \
+                  blender_nodes_dataset_main.jsonl dataset_alpaca_father.json \
+                  dataset_alpaca_father.manifest.json || true
+          git diff --cached --quiet || \
+            git commit -m "chore: scrape run $(date -u +%Y-%m-%d) — $(python -c \
+              'import json; d=json.load(open(\"dataset_alpaca_clean.json\")); print(len(d),\"clean examples\")')"
+          git push

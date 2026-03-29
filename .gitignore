@@ -1,0 +1,23 @@
+# Large intermediate files — too big for GitHub
+blender_nodes_dataset_main.jsonl
+dataset_alpaca_father.json
+main_dataset_alpaca.json
+merge.jsonl
+
+# Scratch / working files
+joins/*
+!joins/.gitkeep
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
