@@ -201,22 +201,28 @@ def download_file_content(item: dict) -> str | None:
     if item.get("_raw_url"):
         url = item["url"]
     else:
-        url = item.get("url", "")
-        # Convert API url to raw content url
-        # https://api.github.com/repos/OWNER/REPO/contents/PATH
-        # → https://raw.githubusercontent.com/OWNER/REPO/REF/PATH
+        # Code search items have html_url like:
+        # https://github.com/OWNER/REPO/blob/BRANCH/path/to/file.json
+        # Convert to raw URL:
+        # https://raw.githubusercontent.com/OWNER/REPO/BRANCH/path/to/file.json
+        html_url = item.get("html_url", "")
         match = re.match(
-            r"https://api\.github\.com/repos/([^/]+/[^/]+)/contents/(.+)",
-            url,
+            r"https://github\.com/([^/]+/[^/]+)/blob/([^/]+)/(.+)",
+            html_url,
         )
         if match:
-            owner_repo, path = match.group(1), match.group(2)
-            repo_data = item.get("repository", {})
-            ref = item.get("ref", "HEAD")
-            url = f"https://raw.githubusercontent.com/{owner_repo}/{ref}/{path}"
+            owner_repo = match.group(1)
+            branch     = match.group(2)
+            path       = match.group(3)
+            url = f"https://raw.githubusercontent.com/{owner_repo}/{branch}/{path}"
         else:
-            # Fall back to API blob download
-            pass
+            # Fallback: construct from repository full_name + path
+            owner_repo = item.get("repository", {}).get("full_name", "")
+            path = item.get("path", "")
+            if owner_repo and path:
+                url = f"https://raw.githubusercontent.com/{owner_repo}/HEAD/{path}"
+            else:
+                return None
 
     r = requests.get(url, headers=HEADERS, timeout=30)
     if r.status_code == 200:
