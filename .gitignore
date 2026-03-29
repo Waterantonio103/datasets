@@ -1,3 +1,6 @@
+# Processing state
+raw/.processed_manifest
+
 # Large intermediate files — too big for GitHub
 blender_nodes_dataset_main.jsonl
 dataset_alpaca_father.json

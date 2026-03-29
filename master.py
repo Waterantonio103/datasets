@@ -16,6 +16,7 @@ import io
 import json
 import os
 import random
+import shutil
 import sys
 import tempfile
 import zipfile
@@ -1563,6 +1564,28 @@ def run_analysis() -> None:
 # recursive loop).
 # =============================================================================
 if __name__ == "__main__":
+
+    # Step -1: stage new raw/ files into joins/ for processing
+    # Tracks which files have already been ingested via raw/.processed_manifest
+    print("=" * 50)
+    print("STEP -1: STAGE NEW RAW FILES")
+    print("=" * 50)
+    raw_dir = Path(_script_dir) / "raw"
+    processed_manifest = raw_dir / ".processed_manifest"
+    already_processed: set[str] = set()
+    if processed_manifest.exists():
+        already_processed = set(processed_manifest.read_text(encoding="utf-8").splitlines())
+    new_staged = 0
+    if raw_dir.exists():
+        os.makedirs(JOINS_DIR, exist_ok=True)
+        for raw_file in sorted(raw_dir.glob("*.json")):
+            if raw_file.name not in already_processed:
+                shutil.copy2(raw_file, os.path.join(JOINS_DIR, raw_file.name))
+                already_processed.add(raw_file.name)
+                new_staged += 1
+        processed_manifest.write_text("\n".join(sorted(already_processed)), encoding="utf-8")
+    print(f"  Staged {new_staged} new raw file(s) into joins/")
+    print()
 
     # Step 0: collect files from joins/ → merge.jsonl
     run_joins()
