@@ -1,0 +1,164 @@
+{
+  "export_version": "0.064",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "Line": {
+      "bl_idname": "LineNode",
+      "color": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -920.0910034179688,
+        -122.19149780273438
+      ],
+      "params": {
+        "Center": 1,
+        "int_": 300,
+        "step_": 0.05000000074505806
+      },
+      "width": 140.0
+    },
+    "Math": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -223.38766479492188,
+        -40.56204605102539
+      ],
+      "params": {
+        "items_": "COSINE"
+      },
+      "width": 140.0
+    },
+    "Math.003": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -228.94491577148438,
+        146.74627685546875
+      ],
+      "params": {
+        "items_": "SINE"
+      },
+      "width": 140.0
+    },
+    "Vector in.001": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        242.0081787109375,
+        1.4737024307250977
+      ],
+      "params": {},
+      "width": 100.0
+    },
+    "Vector out": {
+      "bl_idname": "VectorsOutNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -688.216552734375,
+        40.73668670654297
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Viewer Draw": {
+      "bl_idname": "ViewerNode2",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        461.45135498046875,
+        -79.25218200683594
+      ],
+      "params": {
+        "activate": 1,
+        "vertex_size": 3.202000141143799
+      },
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Line",
+      "Vertices",
+      "Vector out",
+      "Vectors"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Math",
+      "X"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Math.003",
+      "X"
+    ],
+    [
+      "Math.003",
+      "float",
+      "Vector in.001",
+      "X"
+    ],
+    [
+      "Math",
+      "float",
+      "Vector in.001",
+      "Y"
+    ],
+    [
+      "Vector in.001",
+      "Vectors",
+      "Viewer Draw",
+      "vertices"
+    ],
+    [
+      "Line",
+      "Edges",
+      "Viewer Draw",
+      "edg_pol"
+    ]
+  ]
+}

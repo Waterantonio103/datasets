@@ -1,0 +1,804 @@
+{
+  "export_version": "0.10",
+  "framed_nodes": {
+    "A Number": "Frame",
+    "Apply Vector Field": "Frame.003",
+    "Bend Along Surface Field": "Frame.003",
+    "Bounding box": "Frame.003",
+    "Component Analyzer": "Frame.002",
+    "Cubic Spline": "Frame",
+    "Curve Viewer": "Frame.002",
+    "Curve Viewer.001": "Frame.002",
+    "Dual Mesh": "Frame.002",
+    "Inset Special.001": "Frame.001",
+    "List Split": "Frame",
+    "List Split.001": "Frame.002",
+    "Mesh Join.001": "Frame.002",
+    "Mesh viewer": "Frame.001",
+    "Move": "Frame",
+    "Plane": "Frame",
+    "Polygon Boom": "Frame.002",
+    "Polygons to Edges": "Frame.002",
+    "Randomize": "Frame",
+    "Segment": "Frame.002",
+    "Solidify.001": "Frame.001",
+    "Surface from Curves": "Frame",
+    "Vector Math": "Frame.002"
+  },
+  "groups": {},
+  "nodes": {
+    "A Number": {
+      "bl_idname": "SvNumberNode",
+      "custom_socket_props": {},
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1646.4666748046875,
+        -208.64300537109375
+      ],
+      "params": {
+        "int_": 3,
+        "selected_mode": "int"
+      },
+      "width": 140.0
+    },
+    "Apply Vector Field": {
+      "bl_idname": "SvExVectorFieldApplyNode",
+      "custom_socket_props": {},
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        220.0428009033203,
+        -505.95892333984375
+      ],
+      "params": {
+        "output_numpy": true
+      },
+      "width": 140.0
+    },
+    "Bend Along Surface Field": {
+      "bl_idname": "SvExBendAlongSurfaceFieldNode",
+      "custom_socket_props": {},
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -43.929840087890625,
+        -344.50048828125
+      ],
+      "params": {
+        "only_2D": true,
+        "u_min": 0.43999993801116943
+      },
+      "width": 140.0
+    },
+    "Bounding box": {
+      "bl_idname": "SvBBoxNodeMk3",
+      "custom_socket_props": {
+        "0": {
+          "is_mandatory": true
+        }
+      },
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -271.97564697265625,
+        -482.13641357421875
+      ],
+      "params": {
+        "max_list": [
+          true,
+          true,
+          false
+        ],
+        "min_list": [
+          true,
+          true,
+          false
+        ]
+      },
+      "width": 140.0
+    },
+    "Component Analyzer": {
+      "bl_idname": "SvComponentAnalyzerNode",
+      "custom_socket_props": {
+        "0": {
+          "is_mandatory": true
+        },
+        "1": {
+          "nesting_level": 3
+        },
+        "2": {
+          "is_mandatory": true,
+          "nesting_level": 3
+        }
+      },
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        685.193603515625,
+        -1086.7045364379883
+      ],
+      "params": {
+        "face_mode": "Center",
+        "output_numpy": true
+      },
+      "width": 140.0
+    },
+    "Cubic Spline": {
+      "bl_idname": "SvExCubicSplineNode",
+      "custom_socket_props": {},
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -614.0220947265625,
+        42.052978515625
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Curve Viewer": {
+      "bl_idname": "SvCurveViewerNodeV28",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "custom_socket_props": {},
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        1815.5390930175781,
+        -833.4616775512695
+      ],
+      "params": {
+        "basedata_name": "Compressed Structure",
+        "depth": 0.07999999821186066
+      },
+      "use_custom_color": true,
+      "width": 140.0
+    },
+    "Curve Viewer.001": {
+      "bl_idname": "SvCurveViewerNodeV28",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "custom_socket_props": {},
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        1813.3568420410156,
+        -1183.4738235473633
+      ],
+      "params": {
+        "basedata_name": "Tight Structure",
+        "depth": 0.05000000074505806
+      },
+      "use_custom_color": true,
+      "width": 140.0
+    },
+    "Dual Mesh": {
+      "bl_idname": "SvDualMeshNode",
+      "custom_socket_props": {},
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        464.77508544921875,
+        -1319.6721878051758
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Frame": {
+      "bl_idname": "NodeFrame",
+      "custom_socket_props": {},
+      "height": 452.7628173828125,
+      "hide": false,
+      "label": "Control Surface",
+      "location": [
+        -856.2003173828125,
+        699.0258178710938
+      ],
+      "params": {},
+      "width": 1435.488037109375
+    },
+    "Frame.001": {
+      "bl_idname": "NodeFrame",
+      "custom_socket_props": {},
+      "height": 460.9387512207031,
+      "hide": false,
+      "label": "Cover",
+      "location": [
+        -90.38467407226562,
+        316.083984375
+      ],
+      "params": {},
+      "width": 792.0018310546875
+    },
+    "Frame.002": {
+      "bl_idname": "NodeFrame",
+      "custom_socket_props": {},
+      "height": 732.5382690429688,
+      "hide": false,
+      "label": "Structure",
+      "location": [
+        176.56289672851562,
+        -4.583076477050781
+      ],
+      "params": {},
+      "width": 1550.7640380859375
+    },
+    "Frame.003": {
+      "bl_idname": "NodeFrame",
+      "custom_socket_props": {},
+      "height": 515.49951171875,
+      "hide": false,
+      "label": "Surface Bending",
+      "location": [
+        72.0343017578125,
+        189.9449462890625
+      ],
+      "params": {},
+      "width": 692.0184326171875
+    },
+    "Inset Special.001": {
+      "bl_idname": "SvInsetSpecialMk2",
+      "custom_socket_props": {
+        "0": {
+          "is_mandatory": true
+        },
+        "1": {
+          "is_mandatory": true,
+          "nesting_level": 3
+        },
+        "7": {
+          "default_mode": "MATRIX",
+          "nesting_level": 2
+        }
+      },
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        617.7840270996094,
+        -120.06124877929688
+      ],
+      "params": {
+        "inset": 0.550000011920929,
+        "make_inner": 0
+      },
+      "width": 140.0
+    },
+    "List Split": {
+      "bl_idname": "SvListSplitNode",
+      "custom_socket_props": {},
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -817.66455078125,
+        34.47503662109375
+      ],
+      "params": {
+        "split": 3
+      },
+      "width": 140.0
+    },
+    "List Split.001": {
+      "bl_idname": "SvListSplitNode",
+      "custom_socket_props": {},
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        1131.3855285644531,
+        -1007.0244827270508
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Mesh Join.001": {
+      "bl_idname": "SvMeshJoinNodeMk2",
+      "custom_socket_props": {
+        "0": {
+          "default_mode": "NONE",
+          "is_mandatory": true
+        },
+        "1": {
+          "nesting_level": 3
+        },
+        "2": {
+          "nesting_level": 3
+        }
+      },
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        1551.0432434082031,
+        -921.8613967895508
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Mesh viewer": {
+      "bl_idname": "SvMeshViewer",
+      "color": [
+        1.0,
+        0.5889999866485596,
+        0.21400000154972076
+      ],
+      "custom_socket_props": {},
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        1209.7858581542969,
+        -197.0726318359375
+      ],
+      "params": {
+        "base_data_name": "Gamma"
+      },
+      "use_custom_color": true,
+      "width": 140.0
+    },
+    "Move": {
+      "bl_idname": "SvMoveNodeMk3",
+      "custom_socket_props": {
+        "1": {
+          "expanded": true
+        }
+      },
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1037.66455078125,
+        23.05731201171875
+      ],
+      "params": {
+        "movement_vectors": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "strength": 4.480000019073486
+      },
+      "width": 140.0
+    },
+    "Plane": {
+      "bl_idname": "SvPlaneNodeMk3",
+      "color": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "custom_socket_props": {
+        "0": {
+          "label": "Size X"
+        },
+        "1": {
+          "label": "Size Y"
+        },
+        "2": {
+          "label": "Num X"
+        },
+        "3": {
+          "label": "Num Y"
+        },
+        "4": {
+          "label": "Step X"
+        },
+        "5": {
+          "label": "Step Y"
+        }
+      },
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1445.3447265625,
+        109.7628173828125
+      ],
+      "params": {
+        "numx": 3,
+        "numy": 3,
+        "out_np": [
+          true,
+          false,
+          false
+        ],
+        "sizex": 20.0,
+        "sizey": 20.0
+      },
+      "use_custom_color": true,
+      "width": 140.0
+    },
+    "Polygon Boom": {
+      "bl_idname": "PolygonBoomNode",
+      "custom_socket_props": {},
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        1132.9863586425781,
+        -858.9314651489258
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Polygon Grid": {
+      "bl_idname": "SvPolygonGridNode",
+      "custom_socket_props": {},
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -747.51953125,
+        -1161.299072265625
+      ],
+      "params": {
+        "numx": 10,
+        "numy": 10
+      },
+      "width": 170.0
+    },
+    "Polygons to Edges": {
+      "bl_idname": "SvPols2EdgsNodeMk2",
+      "custom_socket_props": {
+        "0": {
+          "label": "Polygons"
+        }
+      },
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        682.584228515625,
+        -1312.7508010864258
+      ],
+      "params": {
+        "unique_edges": true
+      },
+      "width": 140.0
+    },
+    "Randomize": {
+      "bl_idname": "SvRandomizeVerticesNode",
+      "custom_socket_props": {},
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1257.66455078125,
+        103.104248046875
+      ],
+      "params": {
+        "output_numpy": true,
+        "random_seed_": 14,
+        "random_z_": 5.840000152587891
+      },
+      "width": 140.0
+    },
+    "Segment": {
+      "bl_idname": "SvSegmentGenerator",
+      "color": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "custom_socket_props": {},
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        1327.7204895019531,
+        -885.960823059082
+      ],
+      "params": {
+        "split": false
+      },
+      "use_custom_color": true,
+      "width": 140.0
+    },
+    "Solidify.001": {
+      "bl_idname": "SvSolidifyNodeMk2",
+      "custom_socket_props": {},
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        809.0685729980469,
+        -157.7889404296875
+      ],
+      "params": {
+        "thickness": -0.25999999046325684
+      },
+      "width": 140.0
+    },
+    "Surface from Curves": {
+      "bl_idname": "SvInterpolatingSurfaceNode",
+      "custom_socket_props": {},
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -410.9786071777344,
+        41.08270263671875
+      ],
+      "params": {
+        "interp_mode": "CUBIC"
+      },
+      "width": 140.0
+    },
+    "Vector Math": {
+      "bl_idname": "SvVectorMathNodeMK3",
+      "custom_socket_props": {
+        "1": {
+          "expanded": true
+        }
+      },
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        920.4824523925781,
+        -1189.9059524536133
+      ],
+      "params": {
+        "current_op": "ADD",
+        "v3_input_1": [
+          0.0,
+          0.0,
+          -1.7100000381469727
+        ]
+      },
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Surface from Curves",
+      0,
+      "Bend Along Surface Field",
+      0
+    ],
+    [
+      "Bounding box",
+      5,
+      "Bend Along Surface Field",
+      1
+    ],
+    [
+      "Bounding box",
+      8,
+      "Bend Along Surface Field",
+      2
+    ],
+    [
+      "Bounding box",
+      4,
+      "Bend Along Surface Field",
+      3
+    ],
+    [
+      "Bounding box",
+      7,
+      "Bend Along Surface Field",
+      4
+    ],
+    [
+      "List Split",
+      0,
+      "Cubic Spline",
+      0
+    ],
+    [
+      "Mesh Join.001",
+      0,
+      "Curve Viewer",
+      0
+    ],
+    [
+      "Mesh Join.001",
+      1,
+      "Curve Viewer",
+      1
+    ],
+    [
+      "Vector Math",
+      0,
+      "Curve Viewer.001",
+      0
+    ],
+    [
+      "Polygons to Edges",
+      0,
+      "Curve Viewer.001",
+      1
+    ],
+    [
+      "Polygon Grid",
+      1,
+      "Dual Mesh",
+      0
+    ],
+    [
+      "Polygon Grid",
+      2,
+      "Dual Mesh",
+      1
+    ],
+    [
+      "Polygon Grid",
+      3,
+      "Dual Mesh",
+      2
+    ],
+    [
+      "Apply Vector Field",
+      0,
+      "Inset Special.001",
+      0
+    ],
+    [
+      "Polygon Grid",
+      3,
+      "Inset Special.001",
+      1
+    ],
+    [
+      "Move",
+      0,
+      "List Split",
+      0
+    ],
+    [
+      "A Number",
+      0,
+      "List Split",
+      1
+    ],
+    [
+      "Segment",
+      0,
+      "Mesh Join.001",
+      0
+    ],
+    [
+      "Segment",
+      1,
+      "Mesh Join.001",
+      1
+    ],
+    [
+      "Solidify.001",
+      0,
+      "Mesh viewer",
+      0
+    ],
+    [
+      "Solidify.001",
+      2,
+      "Mesh viewer",
+      2
+    ],
+    [
+      "Apply Vector Field",
+      0,
+      "Polygon Boom",
+      0
+    ],
+    [
+      "Polygon Grid",
+      3,
+      "Polygon Boom",
+      1
+    ],
+    [
+      "Dual Mesh",
+      1,
+      "Polygons to Edges",
+      0
+    ],
+    [
+      "Polygon Boom",
+      0,
+      "Segment",
+      0
+    ],
+    [
+      "List Split.001",
+      0,
+      "Segment",
+      1
+    ],
+    [
+      "Inset Special.001",
+      0,
+      "Solidify.001",
+      0
+    ],
+    [
+      "Inset Special.001",
+      1,
+      "Solidify.001",
+      2
+    ],
+    [
+      "Cubic Spline",
+      0,
+      "Surface from Curves",
+      0
+    ],
+    [
+      "Vector Math",
+      0,
+      "List Split.001",
+      0
+    ],
+    [
+      "Apply Vector Field",
+      0,
+      "Component Analyzer",
+      0
+    ],
+    [
+      "Polygon Grid",
+      3,
+      "Component Analyzer",
+      2
+    ],
+    [
+      "Bend Along Surface Field",
+      0,
+      "Apply Vector Field",
+      0
+    ],
+    [
+      "Polygon Grid",
+      1,
+      "Apply Vector Field",
+      1
+    ],
+    [
+      "Randomize",
+      0,
+      "Move",
+      0
+    ],
+    [
+      "Plane",
+      0,
+      "Randomize",
+      0
+    ],
+    [
+      "A Number",
+      0,
+      "Plane",
+      2
+    ],
+    [
+      "Polygon Grid",
+      1,
+      "Bounding box",
+      0
+    ],
+    [
+      "Component Analyzer",
+      0,
+      "Vector Math",
+      0
+    ]
+  ]
+}
